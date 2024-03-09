@@ -31,9 +31,9 @@ export default function SearchSection() {
        <h3 className='mt-3 text-[14px] text-gray-500'>challenging multi-step experiences  with quizzes and progress-tracking.</h3>
        <div className='flex gap-4 mt-4'>
         {
-          searchButtonstags.map((item)=>{
+          searchButtonstags.map((item,i)=>{
             return(
-              <div className='bg-white text-[14px] rounded-md px-2 pb-1 cursor-pointer p-1 hover:scale-110 transition-all duration-300 hover:font-semibold hover:bg-red-500 hover:text-white'>
+              <div key={i} className='bg-white text-[14px] rounded-md px-2 pb-1 cursor-pointer p-1 hover:scale-110 transition-all duration-300 hover:font-semibold hover:bg-red-500 hover:text-white'>
                 {item.tag}
               </div>
             )
