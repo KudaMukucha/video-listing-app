@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
@@ -7,7 +8,7 @@ export default function Header() {
      <div className='flex gap-7 items-center'>
             <img src={'/logo.png'} alt="app-logo" className='w-[40px] rounded-full' />
             <ul className='flex gap-4'>
-                <li className='cursor-pointer hover:bg-red-500 px-3 py-1 pb-2 rounded-sm hover:text-white'>Home</li>
+                <Link to={'/'} className='cursor-pointer hover:bg-red-500 px-3 py-1 pb-2 rounded-sm hover:text-white'>Home</Link>
                 <li className='cursor-pointer hover:bg-red-500 px-3 py-1 pb-2 rounded-sm hover:text-white'>Courses</li>
                 <li className='cursor-pointer hover:bg-red-500 px-3 py-1 pb-2 rounded-sm hover:text-white'>Videos</li>
             </ul>

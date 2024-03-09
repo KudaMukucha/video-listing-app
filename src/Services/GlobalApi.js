@@ -23,7 +23,7 @@ const videoData = {
           thumbnail: '/thumbnails/learn_json.jpg',
           banner: 'https://example.com/banner1.jpg'
         },
-        url:'https://www.youtube.com/watch?v=iiADhChRriM'
+        url:'iiADhChRriM'
       },
       {
         id: 2,
@@ -76,11 +76,22 @@ const videoData = {
       // Add more video objects as needed
     ]
   };
+
   
   const getAllVideosList = () => {
     return Promise.resolve({ data: videoData });
   };
   
+  const getVideoById = (id) => {
+    const video = videoData.data.find((video) => video.id === id);
+    if (video) {
+      return Promise.resolve({ data: video });
+    } else {
+      return Promise.reject(new Error('Video not found'));
+    }
+  };
+
   export default {
-    getAllVideosList
+    getAllVideosList,
+    getVideoById
   };
